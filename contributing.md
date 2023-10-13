@@ -2,16 +2,20 @@
 
 1. Fork this repository.
 
-a. Click on Fork.
+  a. Click on Fork.
+  
 <img width="944" alt="fork1" src="https://github.com/AkashPaloju/examania/assets/119884665/0b87a34c-6f1a-4f00-9d43-f75182cf9f41">
 
-b. Click on Create fork.
+  b. Click on Create fork.
+
 <img width="551" alt="fork-2" src="https://github.com/AkashPaloju/examania/assets/119884665/d5a63a6e-b6b6-498c-8d6b-aa114ef456ad">
 
- c. Click on Code.
+  c. Click on Code.
+  
 <img width="934" alt="fork-3" src="https://github.com/AkashPaloju/examania/assets/119884665/85ca4f5b-3009-45d1-81f9-afd608f1c109">
 
-d. Copy the URL. Use this URL in the next step.
+  d. Copy the URL. Use this URL in the next step.
+  
 <img width="819" alt="fork-4" src="https://github.com/AkashPaloju/examania/assets/119884665/fc3b1398-cabd-4027-acee-5d757dac6897">
 
 
