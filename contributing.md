@@ -4,19 +4,23 @@
 
   a. Click on Fork.
   
-<img width="944" alt="fork1" src="https://github.com/AkashPaloju/examania/assets/119884665/0b87a34c-6f1a-4f00-9d43-f75182cf9f41">
+  <img width="944" alt="fork1" src="https://github.com/Team-NCrypt/examania/assets/119884665/34fd3995-0845-4bf3-b6df-b9456e5dbf2c">
+
 
   b. Click on Create fork.
 
-<img width="551" alt="fork-2" src="https://github.com/AkashPaloju/examania/assets/119884665/d5a63a6e-b6b6-498c-8d6b-aa114ef456ad">
+  <img width="551" alt="fork-2" src="https://github.com/Team-NCrypt/examania/assets/119884665/0bc6736c-a785-47fe-917f-7993c0cfdac6">
+
 
   c. Click on Code.
   
-<img width="934" alt="fork-3" src="https://github.com/AkashPaloju/examania/assets/119884665/85ca4f5b-3009-45d1-81f9-afd608f1c109">
+<img width="934" alt="fork-3" src="https://github.com/Team-NCrypt/examania/assets/119884665/b45db0de-7699-4dfd-9f1e-562e74902eb6">
+
 
   d. Copy the URL. Use this URL in the next step.
   
-<img width="819" alt="fork-4" src="https://github.com/AkashPaloju/examania/assets/119884665/fc3b1398-cabd-4027-acee-5d757dac6897">
+<img width="819" alt="fork-4" src="https://github.com/Team-NCrypt/examania/assets/119884665/693accff-4726-43cc-91c6-b689e9212cc6">
+
 
 
 2. Clone the forked repository, using following command
