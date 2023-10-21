@@ -12,4 +12,4 @@ Join Examania today and supercharge your exam preparation!
 
 ## Tech Stacks:
 - **Frontend**: ReactJS
-- **Backend**: NodeJS, ExpressJS, MySQL
+- **Backend**: NodeJS, ExpressJS, MySQL1
