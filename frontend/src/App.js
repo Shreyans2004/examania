@@ -1,9 +1,9 @@
 
-import Body1 from "./Components/Body1.js";
+import Login from "./Components/login.jsx";
 function App() {
   return (
     <>
-     <Body1/>
+     <Login />
       
     </>
   );
