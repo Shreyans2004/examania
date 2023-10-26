@@ -1,0 +1,24 @@
+.guidelines_1{
+width: 100vw;
+height: 200vh;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.proceed_btn{
+    font-size: 1.2rem;
+    width: 20%;
+    height: 10%;
+    border-radius:15px ;
+    background-color:#483D8B;
+ border: none;
+}
+.above_btn{
+ margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

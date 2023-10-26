@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Cormorant+SC:wght@300;600&family=Dancing+Script:wght@500&family=Inter:wght@300&family=Kumar+One&family=Montserrat:wght@500&family=Pacifico&family=Rubik+Iso&display=swap');
+
+.color_1{
+    background-color: #483D8B;
+    width: 100vw;
+    height: 100vh;
+    color:#483D8B ;
+    font-family: "Kumar One";
+}
+.result_box{
+    border-radius: 101px;
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+.box_1{
+    width: 80%;
+    height: 40%;
+ 
+    margin-bottom: 20px;
+    display: flex;
+justify-content: space-evenly;
+    align-items: center;
+    
+}
+.box1_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 50%;
+   
+    border: 2px solid #483D8B;
+    margin-bottom: 20px; 
+}

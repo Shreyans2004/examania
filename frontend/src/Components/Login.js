@@ -1,5 +1,5 @@
 import React from 'react'
-import './Hero.css'
+import './Login.css'
 const Hero = () => {
   return (
     <div className="hero_main">
@@ -15,11 +15,11 @@ const Hero = () => {
       </div>
       <div className='right'>
         <div className='div_r_1'>
-        <input placeholder='1234@1234.gmail.com'></input>
+        <input className='input_1' placeholder='1234@1234.gmail.com'></input>
         <img  src="./user_icon.png" alt='user_icon' width={40} height={30}></img>
         </div>
         <div className='div_r_2'>
-        <input  placeholder='password'></input>
+        <input className='input_1' placeholder='password'></input>
         <img src='./lock_icon.png' alt='lock_icon'></img></div>
         <div className='div_r_3'>Login</div>
         <div className='div_r_4'><a><span className='underline'>?Forgot Password </span></a></div>
