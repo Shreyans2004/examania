@@ -10,7 +10,7 @@ const Hero = () => {
         </div>
         <div className='div_l_2'>
             <h2 >Welcome to</h2>
-            <h1 class="font_family_1 font2">EXAMANIA</h1>
+            <h1 className="font_family_1 font2">EXAMANIA</h1>
         </div>
       </div>
       <div className='right'>
