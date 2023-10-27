@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Question from "./Components/Question"
+import Hero from "./Components/Hero"
+import Guidelines from "./Components/Guidelines"
+import Result from "./Components/Result"
+import Navbar from "./Components/Navbar"
+import QuestionUpload from "./pages/QuestionUpload"
+import Exam from "./pages/Exam" ;
+import { Route,Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Hero/>}></Route>
+        <Route path="/result" element={<Result/>}></Route>
+        <Route path="/guidelines" element={<Guidelines/>}></Route>
+        <Route path="/question" element={<Question/>}></Route>
+        <Route path="/question-upload" element={<QuestionUpload/>}></Route>
+        <Route path="/exam" element={<Exam /> }></Route>
+      </Routes>
+    </>
   );
 }
 
