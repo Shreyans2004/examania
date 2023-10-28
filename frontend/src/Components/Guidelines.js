@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Guidelines.css"
+import "./Stylesheets/Guidelines.css"
 const guidelines = () => {
   return (
     <div className="color_1">    

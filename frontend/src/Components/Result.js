@@ -1,6 +1,6 @@
 import React from 'react'
-import "./Result.css"
 
+import "./Stylesheets/Result.css"
 const Result = () => {
   return (
     <div>
