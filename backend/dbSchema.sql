@@ -29,15 +29,15 @@ USE `examania_local`;
 -- Table structure for table `questions`
 --
 
-CREATE TABLE `questions` (
+CREATE TABLE IF NOT EXISTS `questions` (
   `quesID` varchar(30) NOT NULL,
-  `quesText` varchar(1500) DEFAULT NULL,
+  `quesText` text DEFAULT NULL,
   `quesType` varchar(100) DEFAULT NULL,
-  `optionA` varchar(100) DEFAULT NULL,
-  `optionB` varchar(100) DEFAULT NULL,
-  `optionC` varchar(100) DEFAULT NULL,
-  `optionD` varchar(100) DEFAULT NULL,
-  `answer` varchar(100) DEFAULT NULL,
+  `optionA` varchar(250) DEFAULT NULL,
+  `optionB` varchar(250) DEFAULT NULL,
+  `optionC` varchar(250) DEFAULT NULL,
+  `optionD` varchar(250) DEFAULT NULL,
+  `answer` varchar(250) DEFAULT NULL,
   `marks` varchar(8) DEFAULT NULL,
   `difficulty` varchar(100) DEFAULT NULL,
   `concept` varchar(300) DEFAULT NULL,
