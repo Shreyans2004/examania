@@ -1,5 +1,6 @@
 import Question from "./Components/Question"
 import Hero from "./Components/Hero"
+import Signup from "./Components/Signup"
 import Guidelines from "./Components/Guidelines"
 import Result from "./Components/Result"
 import Navbar from "./Components/Navbar"
@@ -12,7 +13,7 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Hero/>}></Route>
+        <Route path="/" element={<Signup/>}></Route>
         <Route path="/result" element={<Result/>}></Route>
         <Route path="/guidelines" element={<Guidelines/>}></Route>
         <Route path="/question" element={<Question/>}></Route>
