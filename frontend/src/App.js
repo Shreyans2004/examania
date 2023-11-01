@@ -7,7 +7,6 @@ import Navbar from "./Components/Navbar"
 import QuestionUpload from "./pages/QuestionUpload"
 import Exam from "./pages/Exam" ;
 import { Route,Routes } from "react-router-dom";
-import QuestionUpload1 from "./pages/QuestionUpload1"
 function App() {
   return (
     <>
@@ -17,8 +16,9 @@ function App() {
         <Route path="/result" element={<Result/>}></Route>
         <Route path="/guidelines" element={<Guidelines/>}></Route>
         <Route path="/question" element={<Question/>}></Route>
-        <Route path="/question-upload" element={<QuestionUpload1/>}></Route>
+        <Route path="/question-upload" element={<QuestionUpload/>}></Route>
         <Route path="/exam" element={<Exam /> }></Route>
+        <Route path="/login" element={<Login /> }></Route>
       </Routes>
     </>
   );
