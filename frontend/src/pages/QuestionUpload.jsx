@@ -59,8 +59,7 @@ const QuestionUpload1 = () => {
         <div className="main_div">
           <div className="child_div1">
             <label className="labels">Question Text</label>
-            <input
-              type="text"
+            <textarea
               name="quesText"
               value={formData.quesText}
               onChange={handleChange}
