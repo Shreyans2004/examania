@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Cormorant+SC:wght@300;600&family=Dancing+Script:wght@500&family=Inter:wght@300&family=Kumar+One&family=Montserrat:wght@500&family=Pacifico&family=Rubik+Iso&display=swap');
+
+.hero_main{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color:#3770FF;
+}
+.hero{
+    border-radius: 51px;
+    width: 80vw;
+    height: 80vh;
+    background-color:#D0CBEC;
+}
+.left{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    width: 50%;
+    height: 100%;
+    
+}
+.flex1{
+    display: flex;
+    flex-direction: row;
+}
+.font_family_1{
+    font-family: "Kumar One";
+}
+
+.div_l_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.font2{
+    font-size: 4rem;
+}
+.div_r_1 ,.div_r_2{
+   background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 8%;
+    margin-bottom: 20px;
+}
+.div_r_2{
+    margin-bottom: 40px;
+}
+.div_r_3{
+    width: 50%;
+    height: 8%;
+background-color: #3770FF;
+border-radius:15px ;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size:1.5rem ;
+font-weight: 700;
+
+}
+.div_r_4{
+    width: 50%;
+    height: 8%;
+    color: #3770FF;
+    direction: rtl;
+ border-top: 20px;
+}
+.input_1{
+    width: 80%;
+    height:96%;
+    background-color: black;
+    color:white;
+    border: none;
+}
+.underline{
+    border-bottom: 2px solid #3770FF;
+}
