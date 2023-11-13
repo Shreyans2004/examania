@@ -79,7 +79,7 @@ const getTestResults = async (req,res) => {
   try {
     
     const { testId , examName } = req.body ;
-    const q = "SELECT questions.* ,user_answer, ques_score, verdict FROM test_results JOIN test_results ON test_results.quesid = questions.quesid WHERE testid = ? ;" ;
+    const q = "SELECT questions.* ,user_answer, ques_score, verdict FROM test_results JOIN questions ON test_results.quesid = questions.quesid WHERE testid = ? ;" ;
     const [rows,fields] = await db.execute(q,[req.body.testId]);
 
     const [examDetails,filds] = await db.execute("SELECT * FROM exam_details WHERE exam_name = ? ;",[examName]);

@@ -83,13 +83,14 @@ const submitTest = async (req, res) => {
     const updateQuery = `UPDATE tests SET total_score = ${totalScore}, attempted_ques = ${attemptedQuestions}, correct_ques = ${correctQuestions} , end_time = NOW()  WHERE testid = '${testId}';`;
     await db.execute(updateQuery);
 
-    const q = `INSERT INTO test_results (testid, quesid, user_answer, ques_score, ques_status) VALUES ?;`;
-    await db.execute(q, [values]);
+    const q = `INSERT INTO test_results (testid, quesid, user_answer, ques_score, verdict) VALUES ?;`;
+    await db.query(q, [values]);
 
     res.status(200).json({ message : "success" });
 
   } catch (error) {
-    console.log(err.sqlMessage);
+    console.log(error);
+    console.log(error.sqlMessage);
     res.status(500).json({ message : "failure" });
   }
 };                // updates the tests table and inserts few rows into test_results table

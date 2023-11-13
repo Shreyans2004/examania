@@ -6,5 +6,5 @@ const router = express.Router();
 router.get("/exams", genController.getExams);
 router.post("/questions", genController.addQuestion);
 router.get("/tests", authController.verifyUser, genController.getTests);
-router.get("/tests/:id", authController.verifyUser, genController.getTestResults);
+router.get("/test-report", authController.verifyUser, genController.getTestResults);
 module.exports = router;
