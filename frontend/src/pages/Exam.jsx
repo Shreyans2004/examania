@@ -2,7 +2,9 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Question from '../Components/Question';
 import  {backendURL} from '../constants.js' ;
-
+import Timer from '../Components/Timer.jsx';
+import Questions1 from '../Components/Questions1.jsx';
+import "../styles/Exam.css"
 const Exam = () => {
   console.log(backendURL);
   const [quesData,setQuesData] = useState([]) ;
@@ -22,7 +24,13 @@ const Exam = () => {
 
   return (
     <div>
-      Exam
+    <div className='main'>
+      <Question/>
+      <div className='right'>
+      <Timer/>
+      <Questions1/>
+      </div>
+</div>
       {/* <Question ques={quesData[i]}  /> */}
     </div>
   )

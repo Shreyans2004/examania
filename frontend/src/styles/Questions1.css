@@ -1,0 +1,13 @@
+.cols{
+   height: 20px;
+   width:200px;
+   border: none;
+    display: flex;
+}
+.rows{
+    height: 100%;
+    width:20%;
+   
+    border: 2px solid pink;
+     display: flex;
+ }
