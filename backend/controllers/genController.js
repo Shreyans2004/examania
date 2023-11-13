@@ -52,8 +52,64 @@ const addQuestion = async(req, res) => {
   }
 };            // to add a question into the DB
 
+const getTests = async (req,res) => {
+  try {
+    
+    const q = "SELECT * FROM tests WHERE userid = ?;" ;
+    const [tests,fields] = await db.execute(q,[req.userId]);
+
+    const options = {
+      month: 'short',day: 'numeric',year: 'numeric',hour: 'numeric',minute: 'numeric',timeZoneName: 'short', hour12: false
+    };
+    tests.forEach((test) => {
+      test.start_time = test.start_time.toLocaleString(undefined,options);
+      test.end_time = test.end_time.toLocaleString(undefined,options);
+    });
+
+    res.json({message: "success", tests});
+
+  } catch (error) {
+    res.status(500).json({message: "failure"});
+    console.log(error.sqlMessage);
+    console.log(error);
+  }
+}         // to get all tests of a user
+
+const getTestResults = async (req,res) => {
+  try {
+    
+    const { testId , examName } = req.body ;
+    const q = "SELECT questions.* ,user_answer, ques_score, verdict FROM test_results JOIN questions ON test_results.quesid = questions.quesid WHERE testid = ? ;" ;
+    const [rows,fields] = await db.execute(q,[req.body.testId]);
+
+    const [examDetails,filds] = await db.execute("SELECT * FROM exam_details WHERE exam_name = ? ;",[examName]);
+
+    const groupedQuestions = {} ;
+    rows.forEach((question) => {
+      const { ques_subject, ques_type } = question;
+      const key = `${ques_subject}_${ques_type}`;
+      if (!groupedQuestions[key]) {
+        groupedQuestions[key] = {
+          ques_subject,
+          ques_type,
+          questions: [],
+        };
+      }
+      groupedQuestions[key].questions.push(question);
+    });
+
+    res.json({message: "success", allQuestions : Object.values(groupedQuestions), examDetails});
+
+  } catch (error) {
+    res.status(500).json({message : "failure"});
+    console.log(error.sqlMessage);
+    console.log(error);
+  }
+}
 
 module.exports = {
   getExams,
   addQuestion,
+  getTests,
+  getTestResults,
 };
