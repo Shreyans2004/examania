@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Cormorant+SC:wght@300;600&family=Dancing+Script:wght@500&family=Inter:wght@300&family=Kumar+One&family=Montserrat:wght@500&family=Pacifico&family=Rubik+Iso&display=swap');
 
 .nav{
-
-
-
-  
 color:#3770FF;
 font-weight: 900;
 font-family: "Kumar One";
@@ -16,6 +12,7 @@ font-family: "Kumar One";
     opacity: 0.51;
 }
 .flex1{
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
 }
@@ -27,11 +24,10 @@ font-size: 1rem;
 
 }
 .li_1{
-
     margin-right: 20px;
 }
 .li_2{
-    margin-right: 700px;
+    margin-right: 500px;
 }.li_3{
     margin-right: 80px;
 }.li_4{
@@ -39,5 +35,8 @@ font-size: 1rem;
 }.li_5{
     margin-right: 80px;
 }.li_6{
+    margin-right: 40px;
+}
+.li_7{
     margin-right: 40px;
 }

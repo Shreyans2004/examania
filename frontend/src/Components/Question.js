@@ -3,28 +3,37 @@ import "../styles/Question.css";
 const Question = () => {
   return (
     <>
-
       <div className="questions_1">
-        <div className="color_1">
-          <h1 className="white">Question 1</h1>
-          <div className="question_pallete">
-            <p className="white margin">
-              The velocity ofv a ball is 5 meters per second and suddenly it
-              increases to 20 meters per second .then what will be its
-              acceleration?
-            </p>
-          </div>
+        <div className="Question">
+          <h3 className="text_center">Question</h3>
+          <p>
+            The velocity of a ball is 90 meter per seconds ,then what will be
+            its accelarations?
+          </p>
         </div>
-        <h3 className="white margin">Options</h3>
-        <ol className="white" type="A">
-            <li><input type="checkbox"></input>20 meter/seconds*seconds</li>
-            <li><input type="checkbox"></input>20 meter/seconds*seconds</li>
-            <li><input type="checkbox"></input>20 meter/seconds*seconds</li>
-            <li><input type="checkbox"></input>20 meter/seconds*seconds</li>
-        </ol>
+      
+        <div className="answers">
+          <input type="checkbox" id="optionA" name="options" />
+          <label htmlFor="optionA">A. 10 meters per second square</label>
+        </div>
+
+        <div className="answers">
+          <input type="checkbox" id="optionB" name="options" />
+          <label htmlFor="optionB">B.10 meters per second square</label>
+        </div>
+
+        <div className="answers">
+          <input type="checkbox" id="optionC" name="options" />
+          <label htmlFor="optionC">C. 10 meters per second square</label>
+        </div>
+
+        <div className="answers">
+          <input type="checkbox" id="optionD" name="options" />
+          <label htmlFor="optionD">D. 10 meters per second square</label>
+        </div>
         <div className="buttons">
-        <button className="next">Next</button>
-        <button className="submit">Submit</button>
+        <button>Next</button>
+        <button>Submit</button>
         </div>
       </div>
     </>
