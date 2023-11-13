@@ -66,7 +66,7 @@ const logout = (req, res) => {
 
 const verifyUser = (req, res, next) => {
   const token = req.cookies.access_token;
-  if (!token) return res.status(401).json({message : "Not logged in!"});
+  if (!token) return res.status(403).json({ message : "Please Log in!" });
 
   try {
     
@@ -77,7 +77,7 @@ const verifyUser = (req, res, next) => {
     next();                                           //if token is valid, move to next middleware
 
   } catch (err) {
-    return res.status(401).json({ message : "Your are not authenticated!" });
+    return res.status(401).json({ message : "Your are not authorised!" });
   }
 };
 
