@@ -4,7 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/authRoutes.js");
-const examRoutes = require("./routes/examRoutes.js");
+const genRoutes = require("./routes/genRoutes.js"); 
 const testRoutes = require("./routes/testRoutes.js");
 
 const app = express();         // to create an instance of express app
@@ -20,7 +20,7 @@ app.get("/", (req,res) => {
 
 // routes
 app.use("/api/auth",authRoutes);                       // to use authRoutes
-app.use("/api", examRoutes);                      // to use examRoutes
+app.use("/api", genRoutes);                            // to use genRoutes
 app.use("/api/test", testRoutes);                      // to use testRoutes
 
 app.listen(config.port, () => {
