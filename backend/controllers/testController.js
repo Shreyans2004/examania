@@ -1,11 +1,6 @@
 const db  = require("../db");
 const {nanoid} =  require('nanoid');
 
-//test table
-// test_id userid exam_name difficulty total_score total_ques attempted_ques correct_ques test_time
-//exam_details table
-//exam_name exam_subject no_of_ques pos_mark neg_mark
-
 const startTest =  async (req,res) => {
   const testId = nanoid();
   const userId = req.userId;          //coming from verifyUser middleware
@@ -29,7 +24,7 @@ const startTest =  async (req,res) => {
     res.status(500).json({ message : "failure" });
   }
 
-}
+}        //sends testId and examDetails and inserts a new row in tests table
 
 const getTestQuestions = async(req, res) => {
 
@@ -58,7 +53,7 @@ const getTestQuestions = async(req, res) => {
     console.log(err.sqlMessage);
     res.status(500).json({ message : "failure" });   
   }
-}; // to get all questions ids for a test
+};           //sends all questions required for the test
 
 const getQuestion = async (req, res) => {
 
@@ -78,24 +73,11 @@ const getQuestion = async (req, res) => {
   }
 };                         // to get a question by id
 
-// 	test_id	ques_id	user_answer	ques_score	ques_status
-
 const submitTest = async (req, res) => {
   const { testId, totalScore , attemptedQuestions, correctQuestions,  results } = req.body;
   const values = results.map(({ quesId, userAnswer,quesScore, quesStatus }) => [testId, quesId, userAnswer,quesScore, quesStatus]);
   console.log(values);
-  // var totalScore = 0;
-  // var attemptedQuestions = 0;
-  // var correctQuestions = 0;
-  // for(let i=0;i<values.length;i++) {
-  //   if(values[i][2]!=='') {
-  //     attemptedQuestions++;
-  //     totalScore+=values[i][3];
-  //     if(values[i][4]==='correct') {
-  //       correctQuestions++;
-  //     }
-  //   }
-  // }
+
   try {
 
     const updateQuery = `UPDATE tests SET total_score = ${totalScore}, attempted_ques = ${attemptedQuestions}, correct_ques = ${correctQuestions} WHERE testid = '${testId}';`;
@@ -110,7 +92,7 @@ const submitTest = async (req, res) => {
     console.log(err.sqlMessage);
     res.status(500).json({ message : "failure" });
   }
-}; 
+};                // updates the tests table and inserts few rows into test_results table
 
 module.exports = {
   startTest,
