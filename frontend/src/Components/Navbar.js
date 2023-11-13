@@ -13,6 +13,7 @@ const navbar = () => {
         <li className='li_5'><Link to="/result">Result</Link></li>
         <li className='li_6'><Link to="/question-upload">Question Upload</Link></li>
         <li className='li_7'><Link to="/question">Question</Link></li>
+        <li className='li_8'><Link to="/question">Take a test</Link></li>
       </ul>
 
       </div>  
