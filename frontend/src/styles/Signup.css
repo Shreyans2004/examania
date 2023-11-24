@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Cormorant+SC:wght@300;600&family=Dancing+Script:wght@500&family=Inter:wght@300&family=Kumar+One&family=Montserrat:wght@500&family=Pacifico&family=Rubik+Iso&display=swap');
-
+video {
+   
+    width: 100%;
+    height: 75%;
+    
+  }
+  .main_h1{
+    
+    font-size: 2rem;
+    color: white;
+    background-color: #3770FF;
+  }
 .hero_main{
  display: flex;
  justify-content: center;

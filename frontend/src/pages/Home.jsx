@@ -1,9 +1,14 @@
 import React from 'react'
 import '../styles/Signup.css'
 import { Link } from 'react-router-dom';
+
 function Home() {
   return (
+    
     <form>
+  <div  align="center" className='main_h1' > Scroll down to enter the quiz area</div>
+ <video src="pexels_videos_3867 (720p).mp4" autoPlay loop muted />
+
     <div className="hero_main">
     <div className='hero flex1'>
       <div className='left'>
