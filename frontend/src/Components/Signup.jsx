@@ -20,7 +20,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const response = await axios.post(`${API_URLS.LOGIN}`, formData, {
+      const response = await axios.post(`${API_URLS.SIGNUP}`, formData, {
         withCredentials: true,
       });
       sessionStorage.setItem("username", response.data.username);
