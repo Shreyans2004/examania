@@ -48,6 +48,7 @@ const Signup = () => {
           <div className="right">
             <div className="div_r_1">
               <input
+                name="username"
               onChange={handleChange}
                 value={formData.username}
                 placeholder="username"
@@ -63,6 +64,8 @@ const Signup = () => {
             </div>
             <div className="div_r_2">
               <input
+                name="password"
+                type="password"
                onChange={handleChange}
                 value={formData.password}
                 placeholder="password"

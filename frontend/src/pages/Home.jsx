@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import API_URLS from '../constants.js';
+import Navbar from '../Components/Navbar.js'
 
 function Home() {
   const [formData,setFormData] = useState({
@@ -51,7 +52,8 @@ function Home() {
 
 
   return (
-    
+    <div>
+      <Navbar/>
     <form>
 <div className='main_h1'>  <marquee>Welcome to Examania .Scroll down to enter the quiz area</marquee></div>
  <video src="pexels_videos_3867 (720p).mp4" autoPlay loop muted />
@@ -102,6 +104,7 @@ function Home() {
     </div>
     </div>
     </form>
+    </div>
   
   )
 }
