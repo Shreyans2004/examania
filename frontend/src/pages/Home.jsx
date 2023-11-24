@@ -35,7 +35,7 @@ function Home() {
         <input  placeholder='password' required  className='input_1'></input>
         <img src='./lock_icon.png' alt='lock_icon'></img>
         </div> */}
-        <button className='div_r_3'> <Link to="/guidelines"><span className='span1'>START THE EXAM</span> </Link></button>
+        <button className='div_r_3'> <Link to="/Login"><span className='span1'>START THE EXAM</span> </Link></button>
 
         
       </div>

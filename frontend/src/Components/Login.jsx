@@ -79,8 +79,13 @@ const Login = () => {
               <img src="./lock_icon.png" alt="lock_icon"></img>
             </div>
             <button className='div_r_3' onClick={handleSubmit}>
-            <Link to="/Home">
+            <Link to="/guidelines">
                 <span className="span1" >Login</span>{" "}
+              </Link>
+            </button>
+            <button className='div_r_3' onClick={handleSubmit}>
+            <Link to="/Signup">
+                <span className="span1" >or Sign up</span>{" "}
               </Link>
             </button>
           </div>

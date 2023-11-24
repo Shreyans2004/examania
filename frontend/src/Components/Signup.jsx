@@ -71,7 +71,7 @@ const Signup = () => {
             </div>
             <button className="div_r_3" onClick={handleSubmit}>
               {" "}
-              <Link to="/Home">
+              <Link to="/guidelines">
                 <span className="span1" >Sign up</span>{" "}
               </Link>
             </button>
