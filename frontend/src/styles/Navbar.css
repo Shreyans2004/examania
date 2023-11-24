@@ -9,7 +9,7 @@ font-family: "Kumar One";
     width: 100vw;
     height: 10vh;
     background-color:rgb(72, 61, 139,0.2);
-    opacity: 0.51;
+
 }
 .flex1{
     justify-content: space-around;
@@ -20,7 +20,7 @@ font-family: "Kumar One";
     list-style-type: none;
 }
 .font1{
-font-size: 1rem;
+font-size: 1.2rem;
 
 }
 .li_1{
