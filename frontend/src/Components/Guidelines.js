@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/Guidelines.css";
+import Navbar from "./Navbar";
 import { Link } from 'react-router-dom';
 import axios from 'axios' ;
 import  API_URLS  from "../constants"
@@ -20,6 +21,7 @@ const Guidelines = () => {
   },[]);
   return (
     <form>
+        <Navbar/>
     <div className="guidelines_1">
       <div >
         {/* <input type="checkbox" id="myCheckbox" name="myCheckbox"></input>

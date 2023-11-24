@@ -53,7 +53,7 @@ function Home() {
   return (
     
     <form>
-  <div  align="center" className='main_h1' > Scroll down to enter the quiz area</div>
+<div className='main_h1'>  <marquee>Welcome to Examania .Scroll down to enter the quiz area</marquee></div>
  <video src="pexels_videos_3867 (720p).mp4" autoPlay loop muted />
 
     <div className="hero_main">
@@ -92,7 +92,9 @@ function Home() {
         <input  placeholder='password' required  className='input_1'></input>
         <img src='./lock_icon.png' alt='lock_icon'></img>
         </div> */}
+
         <button className='div_r_3' onClick={handleSubmit}> <span className='span1'>START THE EXAM</span></button>
+
 
         
       </div>

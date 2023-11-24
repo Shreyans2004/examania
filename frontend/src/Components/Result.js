@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Result.css";
+import { Link } from 'react-router-dom';
+import Navbar from "./Navbar";
 
 const Result = () => {
   const totalQuestions = localStorage.getItem("totalQuestions") || 75 ;
@@ -9,6 +11,7 @@ const Result = () => {
 
   return (
     <div>
+    <Navbar/>
       <div className="color_1">
         <div className="result_box">
           <h1>
@@ -31,6 +34,7 @@ const Result = () => {
             </div>
           </div>
         </div>
+      <button className="proceed_btn"><Link to="/Home">Proceed</Link></button>
       </div>
     </div>
   );
