@@ -11,8 +11,8 @@ const navbar = () => {
         <li className='li_3'><Link to="/">Home</Link></li>
         <li className='li_4'><Link to="guidelines">Guidelines</Link></li>
         <li className='li_5'><Link to="/result">Result</Link></li>
-        <li className='li_6'><Link to="/question-upload">Question Upload</Link></li>
-        <li className='li_7'><Link to="/question">Question</Link></li>
+        <li className='li_6'><Link to="/Login">Login</Link></li>
+        <li className='li_7'><Link to="/Signup">Signup</Link></li>
       </ul>
 
       </div>  

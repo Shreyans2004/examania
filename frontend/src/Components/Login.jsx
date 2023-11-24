@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Login.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 const Login = () => {
   const [formData, setFormData] = useState ({
    username:"",
@@ -22,13 +23,14 @@ const Login = () => {
      
       <div className='right'>
         <div className='div_r_1'>
-        <input placeholder='1234@1234.gmail.com'  className='input_1'></input>
+        <input placeholder='1234@1234.gmail.com'   required className='input_1'></input>
         <img  src="./user_icon.png" alt='user_icon' width={40} height={30}></img>
         </div>
         <div className='div_r_2'>
-        <input  placeholder='password'  className='input_1'></input>
+        <input  placeholder='password' required  className='input_1'></input>
         <img src='./lock_icon.png' alt='lock_icon'></img></div>
-        <div className='div_r_3'>Login</div>
+        <button className='div_r_3'> <Link to="/Home"><span className='span1'>Login </span> </Link></button>
+
         <div className='div_r_4'><a><span className='underline'>?Forgot Password </span></a></div>
       </div>
     

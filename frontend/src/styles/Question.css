@@ -1,6 +1,6 @@
 .questions_1{
   
-    background-color:#483D8B;;
+    background-color:#3770FF;;
     width:80vw;
     height: 100vh;
     display: flex;
@@ -14,11 +14,11 @@
     margin-top: 10%;
 height: 20%;
 width:60% ;
-background-color:#483D8B;;
+background-color:#3770FF;;
 }
 .answers{
       border: 2px solid whitesmoke;
-    background-color:#483D8B;;
+    background-color:#3770FF;;
     height:10%;
     width:60%;
    

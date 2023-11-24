@@ -1,12 +1,7 @@
 import React from 'react'
 import '../styles/Signup.css'
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
-const Signup = () => {
-    const [formData, setFormData] = useState ({
-        username:"",
-        password:""
-       })
+function Home() {
   return (
     <form>
     <div className="hero_main">
@@ -21,21 +16,30 @@ const Signup = () => {
         </div>
       </div>
       <div className='right'>
+      <h1>Select the exam</h1>
         <div className='div_r_1'>
-        <input placeholder='1234@1234.gmail.com'  required  className='input_1'></input>
-        <img  src="./user_icon.png" alt='user_icon' width={40} height={30}></img>
+        
+        <select className='input_1'>
+          <option>JEE</option>
+          <option>NEET</option>
+          <option>CLAT</option>
+        </select>
+       
         </div>
-        <div className='div_r_2'>
+        {/* <div className='div_r_2'>
         <input  placeholder='password' required  className='input_1'></input>
-        <img src='./lock_icon.png' alt='lock_icon'></img></div>
-       <button className='div_r_3'> <Link to="/Home"><span className='span1'>Sign up</span> </Link></button>
+        <img src='./lock_icon.png' alt='lock_icon'></img>
+        </div> */}
+        <button className='div_r_3'> <Link to="/guidelines"><span className='span1'>START THE EXAM</span> </Link></button>
+
         
       </div>
      
     </div>
     </div>
     </form>
+  
   )
 }
 
-export default Signup
+export default Home
