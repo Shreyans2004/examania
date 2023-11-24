@@ -20,6 +20,7 @@ function App() {
         <Route path="/question-upload" element={<QuestionUpload/>}></Route>
         <Route path="/exam" element={<Exam /> }></Route>
         <Route path="/login" element={<Login /> }></Route>
+        <Route path="/signup" element={<Signup /> }></Route>
       </Routes>
     </>
   );
