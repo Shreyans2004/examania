@@ -8,6 +8,7 @@ const Signup = () => {
     username:"",
     password:""
   })
+  
   return (
     <form>
     <div className="hero_main">

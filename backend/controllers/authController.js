@@ -74,7 +74,7 @@ const verifyUser = (req, res, next) => {
     
     const decoded = jwt.verify(token, "naajwtkey");
     req.userId = decoded.id;
-    res.json("You are authenticated");
+    // res.json("You are authenticated");
     // console.log(req.userId);
     console.log("You are authenticated!");
     next();                                           //if token is valid, move to next middleware
