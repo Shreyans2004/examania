@@ -13,8 +13,8 @@ const startTest =  async (req,res) => {
 
     const totalQuestions = rows.reduce((sum, row) => sum + row.no_of_ques, 0);
 
-    const insertQuery = `INSERT INTO tests (testid, userid, exam_name, difficulty, total_ques , test_time) VALUES
-      ('${testId}', '${userId}', '${examName}', '${difficulty}', '${totalQuestions}', NOW() );`;
+    const insertQuery = `INSERT INTO tests (testid, userid, exam_name, difficulty, total_ques , start_time, end_time) VALUES
+      ('${testId}', '${userId}', '${examName}', '${difficulty}', '${totalQuestions}', NOW(), NOW() );`;
     await db.execute(insertQuery);
 
     res.json({ message : "success", testId, examDetails : rows , totalQuestions});
@@ -80,16 +80,17 @@ const submitTest = async (req, res) => {
 
   try {
 
-    const updateQuery = `UPDATE tests SET total_score = ${totalScore}, attempted_ques = ${attemptedQuestions}, correct_ques = ${correctQuestions} WHERE testid = '${testId}';`;
+    const updateQuery = `UPDATE tests SET total_score = ${totalScore}, attempted_ques = ${attemptedQuestions}, correct_ques = ${correctQuestions} , end_time = NOW()  WHERE testid = '${testId}';`;
     await db.execute(updateQuery);
 
-    const q = `INSERT INTO test_results (testid, quesid, user_answer, ques_score, ques_status) VALUES ?;`;
-    await db.execute(q, [values]);
+    const q = `INSERT INTO test_results (testid, quesid, user_answer, ques_score, verdict) VALUES ?;`;
+    await db.query(q, [values]);
 
     res.status(200).json({ message : "success" });
 
   } catch (error) {
-    console.log(err.sqlMessage);
+    console.log(error);
+    console.log(error.sqlMessage);
     res.status(500).json({ message : "failure" });
   }
 };                // updates the tests table and inserts few rows into test_results table

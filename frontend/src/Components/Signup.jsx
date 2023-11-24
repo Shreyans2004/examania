@@ -2,11 +2,12 @@ import React from 'react'
 import '../styles/Signup.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
+
 const Signup = () => {
-    const [formData, setFormData] = useState ({
-        username:"",
-        password:""
-       })
+  const [formData, setFormData] = useState ({
+    username:"",
+    password:""
+  })
   return (
     <form>
     <div className="hero_main">

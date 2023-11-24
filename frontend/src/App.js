@@ -5,6 +5,7 @@ import Guidelines from "./Components/Guidelines"
 import Result from "./Components/Result"
 import Navbar from "./Components/Navbar"
 import Questions1 from "./Components/Questions1"
+import Exam_entry from "./Components/Exam_entry"
 import QuestionUpload from "./pages/QuestionUpload"
 import Exam from "./pages/Exam" ;
 import Home from "./pages/Home" ;

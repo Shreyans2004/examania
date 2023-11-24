@@ -1,26 +1,25 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Question from '../Components/Question';
-import  {backendURL} from '../constants.js' ;
+import  API_URLS from '../constants.js' ;
 import Timer from '../Components/Timer.jsx';
 import Questions1 from '../Components/Questions1.jsx';
 import "../styles/Exam.css"
 const Exam = () => {
-  console.log(backendURL);
   const [quesData,setQuesData] = useState([]) ;
 
-  useEffect(() => {
-    const fetchAllQues = async () => {
-      try {
-        const response = await axios.get(`${backendURL}/questions`) ;
-        console.log(response.data)
-        setQuesData(response.data)
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchAllQues() ;
-  }, []) ;
+  // useEffect(() => {
+  //   const fetchAllQues = async () => {
+  //     try {
+  //       const response = await axios.get(API_URLS.GET_QUESTIONS) ;
+  //       console.log(response.data)
+  //       setQuesData(response.data)
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchAllQues() ;
+  // }, []) ;
 
   return (
     <div>

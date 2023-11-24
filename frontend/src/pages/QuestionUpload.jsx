@@ -2,10 +2,11 @@ import { backendURL } from "../constants.js";
 import axios from "axios";
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import API_URLS from "../constants.js";
 
-const QuestionUpload1 = () => {
+const QuestionUpload = () => {
   const [formData, setFormData] = useState({
-    quesID: "",
+    quesId: "",
     quesText: "",
     quesType: "",
     optionA: "",
@@ -34,9 +35,10 @@ const QuestionUpload1 = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    formData.quesID = nanoid();
-    console.log(formData.quesID);
-    formData.quesSubject = formData.quesSubject.toLowerCase();
+    formData.quesId = nanoid();
+    console.log(formData.quesId);
+    // make only first letter capital
+    formData.quesSubject = formData.quesSubject.charAt(0).toUpperCase() + formData.quesSubject.slice(1);
     if (formData.quesType === "Integer") {
       formData.optionA = "";
       formData.optionB = "";
@@ -46,7 +48,7 @@ const QuestionUpload1 = () => {
       formData.answer = formData.answer.toUpperCase();
     }
     try {
-      await axios.post(`${backendURL}/questions`, formData);
+      await axios.post(API_URLS.ADD_QUESTION, formData);
       console.log("Question posted successfully");
     } catch (error) {
       console.log(error);
@@ -217,4 +219,4 @@ const QuestionUpload1 = () => {
   );
 };
 
-export default QuestionUpload1;
+export default QuestionUpload;
