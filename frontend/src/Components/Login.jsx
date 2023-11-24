@@ -56,6 +56,7 @@ const Login = () => {
           <img src='./lock_icon.png' alt='lock_icon'></img>
         </div>
         <button className='div_r_3' onClick={handleSubmit}>Login</button>
+
       </div>
     
     </div>
