@@ -42,11 +42,13 @@ const login = async(req, res) => {
       return res.status(400).json({message : "Invalid credentials!"});
   
     const token = jwt.sign({ id: data[0].userid }, "naajwtkey");
-    const { pass, ...other } = data[0];    //separating password from other user details
+    const { pass, userid , ...other } = data[0];    //separating password, userid from other user details
   
     res
       .cookie("access_token", token, {
-        httpOnly: true,                    // client cannot access the cookie, only server can
+        httpOnly: true,
+        sameSite: "strict",                             //to prevent cookie from being accessed by javascript
+        path : "/"                                 //to prevent cookie from being accessed by javascript                               //for cross site cookies                                     //for https requests only
       })
       .status(200)
       .json(other);
@@ -72,6 +74,7 @@ const verifyUser = (req, res, next) => {
     
     const decoded = jwt.verify(token, "naajwtkey");
     req.userId = decoded.id;
+    res.json("You are authenticated");
     // console.log(req.userId);
     console.log("You are authenticated!");
     next();                                           //if token is valid, move to next middleware
