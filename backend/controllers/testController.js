@@ -28,7 +28,8 @@ const startTest =  async (req,res) => {
 
 const getTestQuestions = async(req, res) => {
 
-  const { difficulty, examName }  = req.body ;                
+  const { difficulty, examName }  = req.body ;     
+  console.log(difficulty, examName)           
 
   try {
 
@@ -40,8 +41,8 @@ const getTestQuestions = async(req, res) => {
     difficulty = ? AND ques_subject = ? AND ques_type = ? AND marks = ? ORDER BY RAND() LIMIT ?;`;
 
     for (let i = 0; i < rows.length; i++) {
-      const [questions,fields] = await db.execute( q, [ difficulty, rows[i].exam_subject, rows[i].ques_type, rows[i].pos_mark, 1 ] );
-      console.log(questions);
+      const [questions,fields] = await db.execute( q, [ difficulty, rows[i].exam_subject, rows[i].ques_type, rows[i].pos_mark, rows[i].no_of_ques ] );
+      console.log(questions.length);
       allQuestions.push( { subject : rows[i].exam_subject, numOfQues : rows[i].no_of_ques, quesType : rows[i].ques_type, posMark : rows[i].pos_mark , negMark: rows[i].neg_mark,  questions} );
     }
 
@@ -75,7 +76,9 @@ const getQuestion = async (req, res) => {
 
 const submitTest = async (req, res) => {
   const { testId, totalScore , attemptedQuestions, correctQuestions,  results } = req.body;
-  const values = results.map(({ quesId, userAnswer,quesScore, quesStatus }) => [testId, quesId, userAnswer,quesScore, quesStatus]);
+  console.log("---Results--");
+  console.log(results);
+  const values = results.map(({ quesid, userAnswer,score, verdict }) => [testId, quesid, userAnswer,score, verdict]);
   console.log(values);
 
   try {

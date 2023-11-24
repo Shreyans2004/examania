@@ -1,8 +1,55 @@
 import React from 'react'
 import '../styles/Signup.css'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import API_URLS from '../constants.js';
 
 function Home() {
+  const [formData,setFormData] = useState({
+    examName: "",
+    difficulty: ""
+  }) ;
+
+  const navigate = useNavigate() ;
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        [name]: type === "checkbox" ? checked : value,
+      };
+    });
+    console.log(formData) ;
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault() ;
+    try {
+      
+      console.log(formData) ;
+      if (formData.examName === "" || formData.difficulty === "") {
+        alert("Please select exam name and difficulty level") ;
+        return ;
+      }
+      const response = await axios.post(`${API_URLS.START_TEST}`,formData, { withCredentials: true }) ;
+      localStorage.setItem('testId',response.data.testId) ;
+      localStorage.setItem('examDetails',JSON.stringify(response.data.examDetails)) ;
+      localStorage.setItem('totalQuestions',response.data.totalQuestions) ;
+      navigate("/guidelines") ; 
+
+    } catch (error) {
+      console.log(error);
+      if(error.response.status === 403 || error.response.status === 401) {
+        navigate('/login') ;
+      }
+
+    }
+  }
+
+
   return (
     
     <form>
@@ -24,10 +71,20 @@ function Home() {
       <h1>Select the exam</h1>
         <div className='div_r_1'>
         
-        <select className='input_1'>
-          <option>JEE</option>
-          <option>NEET</option>
-          <option>CLAT</option>
+        <select name="examName" className='input_1' onChange={handleChange}>
+          <option value="">Select Exam</option>
+          <option value="JEE-MAIN">JEE-MAIN</option>
+          <option value="NEET">NEET</option>
+          <option value="TS-EAMCET">TS-EAMCET</option>
+          <option value="BITSAT">BITSAT</option>
+          <option value="VITEEE">VITEEE</option>
+        </select>
+
+        <select name="difficulty" className='input_1' onChange={handleChange}>
+          <option value="">Select Difficulty</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
         </select>
        
         </div>
@@ -35,7 +92,9 @@ function Home() {
         <input  placeholder='password' required  className='input_1'></input>
         <img src='./lock_icon.png' alt='lock_icon'></img>
         </div> */}
-        <button className='div_r_3'> <Link to="/Login"><span className='span1'>START THE EXAM</span> </Link></button>
+
+        <button className='div_r_3' onClick={handleSubmit}> <span className='span1'>START THE EXAM</span></button>
+
 
         
       </div>

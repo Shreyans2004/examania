@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import Navbar from "./Navbar";
 
 const Result = () => {
+  const totalQuestions = localStorage.getItem("totalQuestions") || 75 ;
+  const attemptedQuestions = localStorage.getItem("attemptedQuestions") || 3 ;
+  const correctQuestions = localStorage.getItem("correctQuestions") || 2 ;
+  const totalScore = localStorage.getItem("totalScore") || 8 ;
+
   return (
     <div>
     <Navbar/>
@@ -14,18 +19,18 @@ const Result = () => {
           </h1>
           <div className="box_1">
             <div className="box1_1">
-              <p>Total Questions answered - 10</p>
+              <p>Total Questions - {totalQuestions}  </p>
             </div>
             <div className="box1_1">
-              <p>Correct answered - 10</p>
+              <p>Question Attempted - {attemptedQuestions} </p>
             </div>
           </div>
           <div className="box_1">
             <div className="box1_1">
-              <p>Total Questions answered - 10</p>
+              <p>Correctly answered - {correctQuestions} </p>
             </div>
             <div className="box1_1">
-              <p>Correct answered - 10</p>
+              <p>Total Score - {totalScore}  </p>
             </div>
           </div>
         </div>

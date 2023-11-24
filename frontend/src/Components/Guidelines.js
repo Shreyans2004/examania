@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Guidelines.css";
 import Navbar from "./Navbar";
 import { Link } from 'react-router-dom';
-const guidelines = () => {
+import axios from 'axios' ;
+import  API_URLS  from "../constants"
+
+const Guidelines = () => {
+
+  useEffect(() => {
+    const fetchAllQuestions = async () => {
+      const formData = {
+        difficulty: localStorage.getItem('difficulty') || "Easy",
+        examName: localStorage.getItem('examName') || "JEE-MAIN"
+      }
+      const response = await axios.post(API_URLS.GET_QUESTIONS,formData) ;
+      // console.log(response.data.allQuestions[0]);
+      localStorage.setItem('quesData',JSON.stringify(response.data.allQuestions)) ;
+    }
+    fetchAllQuestions() ;
+  },[]);
   return (
     <form>
         <Navbar/>
@@ -105,4 +121,4 @@ const guidelines = () => {
   );
 };
 
-export default guidelines;
+export default Guidelines;

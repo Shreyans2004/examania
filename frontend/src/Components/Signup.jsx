@@ -6,6 +6,7 @@ import API_URLS from "../constants.js";
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from "./Navbar.js";
 const Signup = () => {
+  
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -29,6 +30,7 @@ const Signup = () => {
       console.log(error);
     }
   };
+
   return (
     <form>
     <Navbar/>
