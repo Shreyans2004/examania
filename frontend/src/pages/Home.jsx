@@ -6,7 +6,7 @@ function Home() {
   return (
     
     <form>
-  <div  align="center" className='main_h1' > Scroll down to enter the quiz area</div>
+<div className='main_h1'>  <marquee>Welcome to Examania .Scroll down to enter the quiz area</marquee></div>
  <video src="pexels_videos_3867 (720p).mp4" autoPlay loop muted />
 
     <div className="hero_main">

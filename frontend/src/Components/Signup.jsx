@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import API_URLS from "../constants.js";
 import { useNavigate, Link } from "react-router-dom";
+import Navbar from "./Navbar.js";
 const Signup = () => {
   const navigate = useNavigate();
 
@@ -30,6 +31,7 @@ const Signup = () => {
   };
   return (
     <form>
+    <Navbar/>
       <div className="hero_main">
         <div className="hero flex1">
           <div className="left">
