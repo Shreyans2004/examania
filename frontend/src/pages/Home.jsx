@@ -54,9 +54,12 @@ function Home() {
   return (
     <div>
       <Navbar/>
-    <form>
-<div className='main_h1'>  <marquee>Welcome to Examania .Scroll down to enter the quiz area</marquee></div>
+      <div className='main_h1'>  
+      <marquee>Welcome to Examania .Scroll down to enter the quiz area</marquee>
+      </div>
  <video src="pexels_videos_3867 (720p).mp4" autoPlay loop muted />
+    <form>
+
 
     <div className="hero_main">
     <div className='hero flex1'>

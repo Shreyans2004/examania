@@ -81,6 +81,7 @@ video {
     margin-bottom: 40px;
 }
 .div_r_3{
+    cursor: pointer;
     width: 50%;
     height: 8%;
 background-color: #3770FF;
