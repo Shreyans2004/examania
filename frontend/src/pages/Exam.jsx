@@ -189,10 +189,12 @@ const Exam = () => {
   return (
     <div>
       <div className='main'>
-        <Question key = {current.quesid} data = {current} handleNext = {handleNext}  handlePrevious = {handlePrevious} validateAnswer = {validateAnswer} />
-        <div className='right'>
+      <div className='main1_1'>
         <Timer/>
-        {/* <Questions1/> */}
+        <Question key = {current.quesid} data = {current} handleNext = {handleNext}  handlePrevious = {handlePrevious} validateAnswer = {validateAnswer} />
+        {/* <div className='right'>
+        <Questions1/>
+        </div> */}
         </div>
         <button className='submit' onClick={handleSubmit}>Submit</button>
       </div>

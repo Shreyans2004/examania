@@ -46,9 +46,9 @@ const Question = (props) => {
         </div>
 
         <div className="buttons">
-          <button onClick={props.handlePrevious}>Previous</button>
-          <button onClick={props.handleNext}>Next</button>
-          <button onClick={resetOptions}>Reset</button>
+          <button onClick={props.handlePrevious} className="submit1">Previous</button>
+          <button onClick={props.handleNext} className="submit1">Next</button>
+          <button onClick={resetOptions} className="submit1">Reset</button>
         </div>
 
       </div>
