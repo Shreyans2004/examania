@@ -190,6 +190,7 @@ const Exam = () => {
     <div>
       <div className='main'>
       <div className='main1_1'>
+        <h3>JEE MAINS</h3>
         <Timer/>
         <Question key = {current.quesid} data = {current} handleNext = {handleNext}  handlePrevious = {handlePrevious} validateAnswer = {validateAnswer} />
         {/* <div className='right'>
