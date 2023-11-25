@@ -12,7 +12,7 @@ video {
     position: absolute;
     top:-90px;
     left:500px;
-    transform: translateY(100px);
+    transform: translateY(200px);
     font-size: 2rem;
     color: white;
   
